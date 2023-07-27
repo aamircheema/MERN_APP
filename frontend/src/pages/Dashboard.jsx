@@ -61,7 +61,7 @@ const Dashboard = () => {
               </button>
              {' '}
               <button onClick={() => handlePageChange(currentPage + 1)} disabled={currentPage >= totalPages  }>
-                Next
+                Next Page
               </button>
             </div>
           </>
