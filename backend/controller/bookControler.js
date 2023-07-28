@@ -93,11 +93,11 @@ const deleteBook = asyncHandler(async (req, res) => {
         res.status(401)
         throw new Error('User not found')
     }
-// make sure the logged in user matchs the goal user
-    if(book.user.toString() !== user.id){
-res.status(401)
-throw new Error('User not authorized')
-    }
+// // make sure the logged in user matchs the goal user
+//     if(book.user.toString() !== user.id){
+// res.status(401)
+// throw new Error('User not authorized')
+//     }
   
     await book.deleteOne()
     res.status(200).json({ id: req.params.id })
